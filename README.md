@@ -2,7 +2,7 @@
 
 [uidesigndaily](https://www.uidesigndaily.com/posts/figma-people-list-card-day-1424)
 
-### Live website
+### Demo
 
 [People List](https://mdluc.github.io/people-list/)
 
