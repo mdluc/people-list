@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState,useEffect } from 'react';
+import StaffPage from './components/StaffPage/StaffPage';
+
+const url="https://random-data-api.com/api/users/random_user?size=10";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [people,setPeople]=useState([]);
+  
+
+  const fetchPeople = async () =>{
+    try{
+      const response = await fetch(url);
+      const people = await response.json();
+      setPeople(people);
+    }catch(error){
+      console.log(error);
+    }
+  }
+
+  useEffect(() => {
+    fetchPeople();
+  }, [])
+
+  return <StaffPage people={people} />;
 }
 
 export default App;

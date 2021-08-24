@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  --white: #f2fafb;
+  --black: #1f2224;
+  --big-text: 1.35rem;
+  --mid-text:1rem;
+  --small-text: 0.8rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+
+}
+
+.centered {
+  width: 100%;
+  display: flex;
+  display:none;
+}
+.photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.box {
+  margin-top: 10px;
+  font-family: "Merriweather";
+  font-weight: 700;
+}
+.job {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+}
+.photo,
+.box {
+  display: inline-block;
+}
+
+.photo {
+  background-color: black;
+  margin: 10px;
+}
+
+.social {
+  display: flex;
+  font-family: "IBM Plex Sans";
+  font-weight: 300;
+}
+
+.btn-email,
+.btn-twitter,.separator {
+  margin: 10px 5px 0px 0px;
+  font-size: var(--small-text);
+  
+}
+
+a {
+  font-size: var(--small-text);
+  text-decoration: none;
+  color: var(--black);
+  margin-left:2px;
+  font-weight: 400;
+}
+
+
+@media only screen and (max-width:350px){
+  .centered,.social{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  }
