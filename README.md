@@ -5,3 +5,6 @@
 ### Live website
 
 [People List](https://mdluc.github.io/people-list/)
+
+### API used to fetch data
+[Random Data API](https://random-data-api.com/api/users/random_user)
